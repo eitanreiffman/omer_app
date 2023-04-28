@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Calendar from './Calendar';
+import OmerCount from './OmerCount';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+        <div className="text-center m-4">
+            <h1 className='fw-lighter'>Hello, I'm your friendly Omer Counting Assistant</h1>
+        </div>
+        <container>
+            <div className='row'>
+                <div className='col-md-4'>
+                    <Calendar />
+                </div>
+                <div className='col-md-8'>
+                    <OmerCount />
+                </div>
+            </div>
+        </container>
+    </>
   );
 }
 
