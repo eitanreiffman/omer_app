@@ -1,19 +1,23 @@
 import React from 'react';
-import { useState } from 'react';
 
-function OmerCount() {
-    const [lastNightCount, setLastNightCount] = useState(null)
+
+function OmerCount({ lastNightCount, tonightCount }) {
+
     let fullLastNightCount = null;
+    let fullTonightCount = null;
+
 
     if (lastNightCount) {
         fullLastNightCount = `${lastNightCount} days of the Omer`
+    } else {
+        fullLastNightCount = 'No Omer Count'
     }
 
-    const [tonightCount, setTonightCount] = useState(null)
-    let fullTonightCount = null;
 
     if (tonightCount) {
         fullTonightCount = `${tonightCount} days of the Omer`
+    } else {
+        fullTonightCount = 'No Omer Count'
     }
 
     return (
